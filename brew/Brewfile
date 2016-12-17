@@ -1,0 +1,6 @@
+
+# Pacakges
+brew git
+brew vim
+brew zsh
+brew install homebrew/x11/meld
