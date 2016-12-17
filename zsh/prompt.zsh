@@ -1,7 +1,3 @@
-function prompt_char {
-    echo $fg[default]'○'
-}
-
 function box_name {
     [ -f ~/.box-name ] && cat ~/.box-name || hostname -s
 }
@@ -9,16 +5,31 @@ function box_name {
 #setopt promptsubst
 autoload -U colors && colors # Enable colors in prompt
 
+# Colors
+bold=$(tput bold)
+reset=$(tput sgr0)
+
+black=$(tput setaf 0)
+blue=$(tput setaf 33)
+cyan=$(tput setaf 37)
+green=$(tput setaf 70)
+orange=$(tput setaf 166)
+purple=$(tput setaf 125)
+violet=$(tput setaf 61)
+red=$(tput setaf 124)
+white=$(tput setaf 15)
+yellow=$(tput setaf 220)
+
 # Modify the colors and symbols in these variables as desired.
-GIT_PROMPT_SYMBOL="%{$fg[blue]%}±"
-GIT_PROMPT_PREFIX="%{$fg[green]%} [%{$reset_color%}"
-GIT_PROMPT_SUFFIX="%{$fg[green]%}]%{$reset_color%}"
-GIT_PROMPT_AHEAD="%{$fg[red]%}ANUM%{$reset_color%}"
-GIT_PROMPT_BEHIND="%{$fg[cyan]%}BNUM%{$reset_color%}"
-GIT_PROMPT_MERGING="%{$fg_bold[magenta]%}⚡︎%{$reset_color%}"
-GIT_PROMPT_UNTRACKED="%{$fg_bold[red]%}u%{$reset_color%}"
-GIT_PROMPT_MODIFIED="%{$fg_bold[yellow]%}d%{$reset_color%}"
-GIT_PROMPT_STAGED="%{$fg_bold[green]%}s%{$reset_color%}"
+GIT_PROMPT_SYMBOL="${blue}±"
+GIT_PROMPT_PREFIX="${bold}${blue} ["
+GIT_PROMPT_SUFFIX="${blue}]%{$reset_color%}"
+GIT_PROMPT_AHEAD="${green}ANUM"
+GIT_PROMPT_BEHIND="${red}BNUM"
+GIT_PROMPT_MERGING="${cyan}⚡︎"
+GIT_PROMPT_UNTRACKED="${orange}u"
+GIT_PROMPT_MODIFIED="${yellow}m"
+GIT_PROMPT_STAGED="${green}s"
 
 # Show Git branch/tag, or name-rev if on detached head
 function parse_git_branch() {
@@ -68,16 +79,22 @@ function parse_git_state() {
 # If inside a Git repository, print its branch and state
 function git_prompt_string() {
   local git_where="$(parse_git_branch)"
-  [ -n "$git_where" ] && echo "on %{$fg[blue]%}${git_where#(refs/heads/|tags/)}%{$reset_color%}$(parse_git_state)"
+  [ -n "$git_where" ] && echo "on ${bold}${violet}${git_where#(refs/heads/|tags/)}%{$reset_color%}$(parse_git_state)"
 }
 
 function current_pwd {
   echo $(pwd | sed -e "s,^$HOME,~,")
 }
 
-PROMPT='
-${PR_GREEN}%n%{$reset_color%} %{$FG[239]%}at%{$reset_color%} ${PR_BOLD_BLUE}$(box_name)%{$reset_color%} $FG[239]%}in%{$reset_color%} ${PR_BOLD_YELLOW}$(current_pwd)%{$reset_color%} $(git_prompt_string) 
-$(prompt_char) '
+
+PROMPT='${bold}${orange}%n ' # Name
+PROMPT+='${white}at ' # at
+PROMPT+='${yellow}$(box_name) ' # Box Name
+PROMPT+='${white}in ' # in
+PROMPT+='${green}$(current_pwd)%{$reset_color%} ' # Directory
+PROMPT+='$(git_prompt_string)' # Git Info 
+PROMPT+='
+> ' # New Line Prompt Character
 
 export SPROMPT="Correct $fg[red]%R$reset_color to $fg[green]%r$reset_color [(y)es (n)o (a)bort (e)dit]? "
 
