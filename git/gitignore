@@ -3,6 +3,8 @@
 .idea/
 [bB]uild/
 build
+out/
+generated-src/
 
 # Compiled Python files
 *.pyc
