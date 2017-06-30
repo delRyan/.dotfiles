@@ -97,4 +97,5 @@ PROMPT+='
 > ' # New Line Prompt Character
 
 export SPROMPT="Correct $fg[red]%R$reset_color to $fg[green]%r$reset_color [(y)es (n)o (a)bort (e)dit]? "
+export RPROMPT=""
 
