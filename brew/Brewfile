@@ -6,3 +6,4 @@ brew zsh
 brew install homebrew/x11/meld
 brew install mobile-shell
 brew install node
+brew install rbenv
