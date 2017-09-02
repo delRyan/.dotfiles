@@ -6,6 +6,13 @@ build
 out/
 generated-src/
 
+# VSCode
+.vscode/
+
+# Web Dev
+node_modules/
+npm-debug.log
+
 # Compiled Python files
 *.pyc
 
