@@ -22,6 +22,11 @@ setopt hist_reduce_blanks # Remove extra blanks from each command line being add
 setopt hist_verify # don't execute, just expand history
 setopt share_history # imports new commands and appends typed commands to history
 
+HISTSIZE=5000 # How many lines of history to keep in memory
+SAVEHIST=5000 # Number of history entries to save to disk
+HISTFILE=~/.zsh_history # Where to save history to disk
+
+
 # ===== Completion 
 setopt always_to_end # When completing from the middle of a word, move the cursor to the end of the word    
 setopt auto_menu # show completion menu on successive tab press. needs unsetop menu_complete to work
