@@ -1,8 +1,8 @@
 
 # Pacakges
-brew git
-brew vim
-brew zsh
+brew install git
+brew install vim
+brew install zsh
 brew install homebrew/x11/meld
 brew install mobile-shell
 brew install node
