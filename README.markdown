@@ -14,8 +14,8 @@ git clone https://github.com/delRyan/.dotfiles.git ~/.dotfiles
 ```
 3. Create symlinks
 ```
-cd ~/.dotfiles
-./install.sh
+cd ~/.dotfiles \
+zsh deploy.sh
 ```
 
 ## Additional Applications
