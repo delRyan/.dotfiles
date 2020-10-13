@@ -6,9 +6,10 @@
 	today = "log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative"
 	dag = "log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order"
 
-	# Amend currently staged commits (amend-old requires a "tree-ish" argument like HEAD~2.).
+	# Amend previous commit.
 	amend = commit --amend --reuse-message=HEAD
-	amend-old = !sh -c 'REV=$(git rev-parse $1) && git commit --fixup $@ && git rebase -i --autostash --autosquash $REV^' -
+	# Amend commit by value. "git fixup 62c0acf"
+	fixup = !sh -c 'REV=$(git rev-parse $1) && git commit --fixup $@ && git rebase -i --autostash --autosquash $REV^' -
 
 	# Find commits by commit message
 	fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
