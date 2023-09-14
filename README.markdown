@@ -20,9 +20,8 @@ zsh deploy.sh
 
 ## Additional Applications
 #### OSX
-- Bear Notes (App Store)
+- Obsidian Notes
 - Status Clock (App Store)
-- Spectacle Window Management
+- Magnet Window Management (App Store)
 - Bartender Organizer
 - Alfred Search
-- Rocket Emoji
