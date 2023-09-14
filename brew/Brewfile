@@ -1,10 +1,9 @@
-
 # Pacakges
 brew install git
 brew install vim
 brew install zsh
-brew install homebrew/x11/meld
 brew install mobile-shell
 brew install node
+brew install nvm
 brew install rbenv
 brew install jq
