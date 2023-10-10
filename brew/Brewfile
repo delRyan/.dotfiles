@@ -6,4 +6,6 @@ brew install mobile-shell
 brew install node
 brew install nvm
 brew install rbenv
+brew install go
+brew install httpie
 brew install jq
