@@ -14,8 +14,7 @@ git clone https://github.com/delRyan/.dotfiles.git ~/.dotfiles
 ```
 3. Create symlinks
 ```
-cd ~/.dotfiles \
-zsh deploy.sh
+zsh ~/.dotfiles/deploy.sh
 ```
 
 ## Additional Applications
@@ -25,3 +24,4 @@ zsh deploy.sh
 - Magnet Window Management (App Store)
 - Bartender Organizer
 - Alfred Search
+- SDKMAN (Java Version Manager)
