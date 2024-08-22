@@ -1,6 +1,6 @@
 [alias]
 
-	#History
+	# History
 	hist = "log --graph --full-history --all --color --date=short --pretty=format:'%Cred%x09%h %Creset%ad%Cblue%d %Creset %s %C(bold)(%an)%Creset'"
 	ahead = "log @{u}...HEAD --graph --decorate --left-right --boundary --pretty=format:'%Cred%h%Creset %d %s %Cgreen(%cr)%Creset %Cblue[%an]%Creset' --abbrev-commit --date=relative"
 	today = "log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative"
@@ -21,6 +21,10 @@
 	# git change-commits GIT_AUTHOR_NAME "old name" "new name"
 	# git change-commits GIT_AUTHOR_EMAIL "old@email.com" "new@email.com"
 	change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f "
+
+	# Pull Request (force) current branch
+	pr = "push origin HEAD"
+	prf = "push origin HEAD -f"
 
 [apply]
 
@@ -117,3 +121,10 @@
 
 	default = simple
 
+[pull]
+
+	rebase = true
+
+[rebase]
+
+	autoStash = true
