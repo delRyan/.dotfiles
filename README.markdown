@@ -6,22 +6,18 @@ Credit to Mark Nichols (https://github.com/zanshin/dotfiles)
 
 ## Installation
 
-1. Install packages as needed from Brewfile
-
-2. Clone Repo
+1. Install HomeBrew
+2. Install CLIs and Applications
 ```
-git clone https://github.com/delRyan/.dotfiles.git ~/.dotfiles
+brew bundle --file ./brew/Brewfile
 ```
 3. Create symlinks
 ```
-zsh ~/.dotfiles/deploy.sh
+./deploy.sh
 ```
 
 ## Additional Applications
 #### OSX
-- Obsidian Notes
 - Status Clock (App Store)
 - Magnet Window Management (App Store)
-- Bartender Organizer
-- Alfred Search
 - SDKMAN (Java Version Manager)

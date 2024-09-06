@@ -1,14 +1,14 @@
 #! /bin/bash
 
-ln -s ~/.dotfiles/git/gitconfig ~/.gitconfig
-ln -s ~/.dotfiles/git/gitignore ~/.gitignore
+ln -s ./git/gitconfig ~/.gitconfig
+ln -s ./git/gitignore ~/.gitignore
 
-ln -s ~/.dotfiles/zsh ~/.zsh
-ln -s ~/.zsh/zshrc ~/.zshrc
+ln -s ./zsh ~/.zsh
+ln -s ./zsh/zshrc ~/.zshrc
 
-ln -s ~/.dotfiles/vim ~/.vim
-ln -s ~/.vim/vimrc ~/.vimrc
+ln -s ./vim ~/.vim
+ln -s ./vim/vimrc ~/.vimrc
 
-ln -s ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
+ln -s ./tmux/.tmux.conf ~/.tmux.conf
 
-ln -sf ~/.dotfiles/warp ~/.warp
+ln -sf ./warp ~/.warp
