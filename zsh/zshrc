@@ -6,4 +6,3 @@ source ~/.zsh/prompt.zsh
 source ~/.zsh/aliases.zsh
 source ~/.zsh/functions.zsh
 source ~/.zsh/completion.zsh
-# source ~/.zsh/amazon.zsh
