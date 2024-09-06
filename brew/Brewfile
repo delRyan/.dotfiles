@@ -2,6 +2,7 @@
 brew 'git'
 brew 'vim'
 brew 'zsh'
+brew 'eza'
 
 # Programming
 brew 'node'
@@ -18,11 +19,13 @@ brew 'jq'
 
 # Kubernetes
 brew 'kubectl'
+brew 'helm'
 brew 'minikube'
 brew 'k9s'
 
 # Applications
 cask 'iterm2'
+cask 'warp'
 cask 'obsidian'
 cask 'visual-studio-code'
 cask 'firefox'
