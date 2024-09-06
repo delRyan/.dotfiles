@@ -16,6 +16,7 @@ brew 'pipx'
 brew 'mobile-shell'
 brew 'httpie'
 brew 'jq'
+brew 'neofetch'
 
 # Kubernetes
 brew 'kubectl'
