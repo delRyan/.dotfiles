@@ -2,7 +2,6 @@
 brew 'git'
 brew 'vim'
 brew 'zsh'
-brew 'eza'
 
 # Programming
 brew 'node'
@@ -17,6 +16,9 @@ brew 'mobile-shell'
 brew 'httpie'
 brew 'jq'
 brew 'neofetch'
+brew 'eza'
+brew 'font-hack-nerd-font'
+brew 'starship'
 
 # Kubernetes
 brew 'kubectl'

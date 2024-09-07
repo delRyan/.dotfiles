@@ -1,0 +1,86 @@
+# https://starship.rs/config
+
+add_newline = true
+command_timeout = 1000
+format = """$os$username$hostname$kubernetes$directory$git_branch$git_status\n$character"""
+
+[line_break]
+disabled = true
+
+[character]
+format = '> '
+success_symbol = ''
+error_symbol = ''
+
+# ---
+
+[os]
+disabled = false
+format = '[$symbol](bold white) '
+
+[os.symbols]
+Macos = '󰀵'
+Ubuntu = ''
+Windows = ''
+
+# ---
+
+[username]
+disabled = false
+show_always = true
+style_user = 'white bold'
+style_root = 'black bold'
+format = '[$user]($style) '
+
+[hostname]
+disabled = true
+ssh_only = false
+format = '[$hostname](bold yellow) '
+
+[directory]
+home_symbol = '󰋜 ~'
+read_only_style = '(197)'
+read_only = '  '
+format = '[$path]($style)[$read_only]($read_only_style) '
+style ='bold blue'
+
+[git_branch]
+symbol = ' '
+format = '[$remote_branch:$branch]($style)'
+style = 'bold green'
+
+[git_status]
+format = '([ \( $staged$modified$untracked$ahead_behind\)]($style))'
+style = 'bold green'
+conflicted = ' [conflicted=${count}](red) '
+ahead = 'A${count} '
+behind = 'B${count} '
+staged = '[s${count}](green) '
+modified = '[m${count}](yellow) '
+untracked = '[u${count}](red) '
+renamed = '[r${count}](yellow) '
+deleted = '[d${count}](red) '
+
+[kubernetes]
+disabled = false
+format = '[$context\($namespace\)](bold purple)'
+
+# ---
+
+[docker_context]
+disabled = true
+
+[helm]
+disabled = true
+
+[python]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[ruby]
+disabled = true
+
+[terraform]
+disabled = true
