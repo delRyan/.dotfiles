@@ -1,14 +1,21 @@
 #! /bin/bash
 
-ln -s ./git/gitconfig ~/.gitconfig
-ln -s ./git/gitignore ~/.gitignore
+ln -sf $PWD/git/gitconfig ~/.gitconfig
+ln -sf $PWD/git/gitignore ~/.gitignore
 
-ln -s ./zsh ~/.zsh
-ln -s ./zsh/zshrc ~/.zshrc
+rm -rf ~/.zsh
+ln -s $PWD/zsh ~/.zsh
+ln -sf $PWD/zsh/zshrc ~/.zshrc
 
-ln -s ./vim ~/.vim
-ln -s ./vim/vimrc ~/.vimrc
+rm -rf ~/.vim
+ln -s $PWD/vim ~/.vim
+ln -sf $PWD/vim/vimrc ~/.vimrc
 
-ln -s ./tmux/.tmux.conf ~/.tmux.conf
+ln -sf $PWD/tmux/.tmux.conf ~/.tmux.conf
 
-ln -sf ./warp ~/.warp
+rm -rf ~/.warp
+ln -s $PWD/warp ~/.warp
+
+# Don't disturb other apps using ~/.config
+mkdir -p ~/.config
+ln -sf $PWD/config/* ~/.config/
