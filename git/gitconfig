@@ -107,6 +107,7 @@
 
 	email = 
 	name = Ryan Delaney
+	signingkey = 
 
 [amazon]
 
@@ -128,3 +129,7 @@
 [rebase]
 
 	autoStash = true
+
+[gpg]
+	
+  format = ssh
