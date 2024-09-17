@@ -33,7 +33,6 @@ brew 'k3sup'
 # Applications
 cask 'iterm2'
 cask 'wireshark'
-cask 'warp'
 cask 'obsidian'
 cask 'visual-studio-code'
 cask 'firefox'
