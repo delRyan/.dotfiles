@@ -2,7 +2,7 @@
 
 add_newline = true
 command_timeout = 1000
-format = """$os$username$hostname$kubernetes$directory$git_branch$git_status\n$character"""
+format = """$os$username$hostname$directory$kubernetes$git_branch$git_status\n$character"""
 
 [line_break]
 disabled = true
@@ -63,7 +63,7 @@ deleted = '[d${count}](red) '
 
 [kubernetes]
 disabled = false
-format = '[$context\($namespace\)](bold purple)'
+format = '[$context\($namespace\) ](bold purple)'
 
 # ---
 
